@@ -27,6 +27,7 @@ pred = user_input()
 #Loading dataset
 df = pd.read_csv(r"C:\Users\RAINA\Downloads\Data.txt")
 
+
 attr = df.iloc[:,:-1].values
 labels = df.iloc[:,1].values
 
@@ -41,4 +42,6 @@ if pred > 9.97:
 else:
     st.button("Predict")
     st.success("The Predicted Percentage is {}".format(prediction))
- 
+st.dataframe(df)
+st.area_chart(df)
+
